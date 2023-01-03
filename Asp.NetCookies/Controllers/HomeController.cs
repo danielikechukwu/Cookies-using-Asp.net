@@ -1,5 +1,7 @@
 ﻿using Asp.NetCookies.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
+using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 
 namespace Asp.NetCookies.Controllers
@@ -13,8 +15,21 @@ namespace Asp.NetCookies.Controllers
             _logger = logger;
         }
 
+        
+
         public IActionResult Index()
         {
+            CookieOptions options = new CookieOptions();
+
+            options.Expires = DateTime.Now.AddMinutes(1);
+
+            options.IsEssential = true;
+
+            options.Path = "/";
+
+            HttpContext.Response.Cookies.Append("MyCookie", "ljsroifngvos;erivs;orngvs;eor", options);
+
+
             return View();
         }
 
