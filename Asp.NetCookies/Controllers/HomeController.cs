@@ -27,7 +27,7 @@ namespace Asp.NetCookies.Controllers
 
             options.Path = "/";
 
-            HttpContext.Response.Cookies.Append("MyCookie", "ljsroifngvos;erivs;orngvs;eor", options);
+            HttpContext.Response.Cookies.Append("MyCookie", "hg274gforj78sjbfgrt2kfhdysgheudjkjhfy72jb888", options);
 
 
             return View();
